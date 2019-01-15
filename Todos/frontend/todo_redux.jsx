@@ -4,6 +4,8 @@ import configureStore from './store/store';
 import {receiveTodo, receiveTodos} from "./actions/todo_actions";
 import Root from './components/root';
 import allTodos from "./reducers/selectors";
+import TodoListContainer from "./components/todos/todo_list_container";
+import TodoList from './components/todos/todo_list';
 
 // function Root() {
 //   return (
@@ -17,5 +19,5 @@ document.addEventListener("DOMContentLoaded", () => {
   window.allTodos = allTodos;
   window.receiveTodo = receiveTodo;
   window.receiveTodos = receiveTodos;
-  ReactDOM.render(<Root store={store} />, root);
+  ReactDOM.render(<TodoListContainer />, root);
 });
